@@ -12,6 +12,7 @@ contract CrowdFunding {
        string image;
        Donator[] donators;
    }
+   
    struct Donator {
        address donator;
        uint256 amount;
