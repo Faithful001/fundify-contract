@@ -14,7 +14,7 @@ module.exports = {
   networks: {
     zksync_testnet: {
       url: "https://zksync2-testnet.zksync.dev",
-      ethNetwork: "goerli",
+      ethNetwork: "goerli", // Ethereum L1 testnet
       chainId: 280,
       zksync: true,
     },
@@ -33,6 +33,14 @@ module.exports = {
   },
   solidity: {
     version: "0.8.17",
+    defaultNetwork: "sepolia",
+    networks: {
+      hardhat: {},
+      sepolia: {
+        url: "https://sepolia.drpc.org",
+        accounts: [`0x${process.env.PRIVATE_KEY}`],
+      },
+    },
     settings: {
       optimizer: {
         enabled: true,
