@@ -37,7 +37,7 @@ module.exports = {
     networks: {
       hardhat: {},
       sepolia: {
-        url: "https://sepolia.drpc.org",
+        url: `https://eth-sepolia.g.alchemy.com/v2/${process.env.NEXT_PUBLIC_ALCHEMY_API_KEY}`,
         accounts: [`0x${process.env.PRIVATE_KEY}`],
       },
     },
